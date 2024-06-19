@@ -6,7 +6,9 @@
       "@components/*": ["src/components/*"],
       "@styles/*": ["src/styles/*"],
       "@shared/*": ["src/components/shared/*"],
-      "@contexts/*": ["src/contexts/shared/*"]
+      "@contexts/*": ["src/contexts/*"],
+      "@models/*": ["src/models/*"],
+      "@pages/*": ["src/pages/*"]
     }
   }
 }

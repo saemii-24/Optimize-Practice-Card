@@ -1,30 +1,15 @@
-import './App.css'
-
-import Text from '@shared/Text'
-import { useAlertContext } from './contexts/AlertContext'
-import Button from './components/shared/Button'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import HomePage from './pages/Home'
+import TestPage from './pages/Test'
 
 function App() {
-  const { open } = useAlertContext()
   return (
-    <div>
-      <Text typography="t1" display="block" color="red">
-        야호!
-      </Text>
-      <Button
-        onClick={() => {
-          open({
-            title: '카드신청완료',
-            description: '내역페이지에서 확인해주세요',
-            onButtonClick: () => {
-              //
-            },
-          })
-        }}
-      >
-        오픈!
-      </Button>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" Component={HomePage} />
+        <Route path="/test" Component={TestPage} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
