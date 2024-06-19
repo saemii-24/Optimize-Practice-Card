@@ -9,7 +9,7 @@ import {
 } from '@styles/button'
 import Flex from './Flex'
 import Text from './Text'
-import Spacing from './Spacing'
+// import Spacing from './Spacing'
 
 interface ButtonProps {
   color?: ButtonColor
@@ -59,7 +59,7 @@ function ButtonGroup({
           <Text typography="t6" bold={true}>
             {title}
           </Text>
-          <Spacing size={8} />
+          {/* <Spacing size={8} /> */}
         </>
       ) : null}
       <Flex css={buttonGroupStyle}>{children}</Flex>
