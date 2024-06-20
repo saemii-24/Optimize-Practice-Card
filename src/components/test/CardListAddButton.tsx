@@ -1,7 +1,10 @@
 import Button from '@shared/Button'
+//한 번에 데이터 넣을 수 있는 writeBatch
 import { collection, doc, writeBatch } from 'firebase/firestore'
 
+import { store } from '@remote/firebase'
 import { card_list } from '@/mock/data'
+import { COLLECTIONS } from '@/constants'
 
 function CardListAddButton() {
   const handleButtonClick = async () => {
