@@ -1,15 +1,31 @@
-// Header 컴포넌트 정의
-const Try = ({ children }: { children: any }) => {
-  return <div className="try">{children}</div>
+import React from 'react'
+import { css, SerializedStyles } from '@emotion/react'
+
+// Try 컴포넌트 정의
+const Try = ({
+  children,
+  style,
+}: {
+  children: React.ReactNode
+  style: SerializedStyles
+}) => {
+  return (
+    <div css={style} className="try">
+      {children}
+    </div>
+  )
 }
 
-// Try.Left 컴포넌트 정의
-Try.Left = ({ children }: { children: any }) => {
+// Try 컴포넌트의 서브 컴포넌트 정의
+Try.Left = ({ children }: { children: React.ReactNode }) => {
   return <div className="try-left">{children}</div>
 }
 
-// Try.Right 컴포넌트 정의
-Try.Right = ({ children }: { children: any }) => {
+Try.Mid = ({ children }: { children: React.ReactNode }) => {
+  return <div className="try-mid">{children}</div>
+}
+
+Try.Right = ({ children }: { children: React.ReactNode }) => {
   return <div className="try-right">{children}</div>
 }
 
