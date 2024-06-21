@@ -1,8 +1,8 @@
 import { css } from '@emotion/react'
 import Flex from './Flex'
 import Text from './Text'
-import Skeleton from './Skeleton'
-import Spacing from './Spacing'
+// import Skeleton from './Skeleton'
+// import Spacing from './Spacing'
 
 //ListRow 컴포넌트는 위치만 잡아준다.
 //합성 컴포넌트를 만든다.
@@ -66,7 +66,7 @@ function ListRowSkeleton() {
     <Flex as="li" css={listRowContainerStyles} align="center">
       <Flex css={listRowLeftStyles}></Flex>
       <Flex css={listRowContentsStyles}>
-        <ListRow.Texts
+        {/* <ListRow.Texts
           title={
             <>
               <Skeleton width={67} height={23} />
@@ -74,7 +74,7 @@ function ListRowSkeleton() {
             </>
           }
           subTitle={<Skeleton width={85} height={20} />}
-        />
+        /> */}
       </Flex>
       <IconArrowRight />
     </Flex>
