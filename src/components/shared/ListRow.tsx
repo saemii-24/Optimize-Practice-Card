@@ -1,11 +1,7 @@
 import { css } from '@emotion/react'
 import Flex from './Flex'
 import Text from './Text'
-// import Skeleton from './Skeleton'
-// import Spacing from './Spacing'
 
-//ListRow 컴포넌트는 위치만 잡아준다.
-//합성 컴포넌트를 만든다.
 interface ListRowProps {
   left?: React.ReactNode
   contents: React.ReactNode
@@ -24,7 +20,6 @@ function ListRow({
   onClick,
 }: ListRowProps) {
   return (
-    // as props를 이용해 div가 아닌 li로 렌더링 할 수 있음.
     <Flex as={as} css={listRowContainerStyles} onClick={onClick} align="center">
       <Flex css={listRowLeftStyles}>{left}</Flex>
       <Flex css={listRowContentsStyles}>{contents}</Flex>
@@ -50,33 +45,13 @@ function ListRowTexts({
   title,
   subTitle,
 }: {
-  title: React.ReactNode
-  subTitle: React.ReactNode
+  title: string
+  subTitle: string
 }) {
   return (
     <Flex direction="column">
       <Text bold={true}>{title}</Text>
       <Text typography="t7">{subTitle}</Text>
-    </Flex>
-  )
-}
-
-function ListRowSkeleton() {
-  return (
-    <Flex as="li" css={listRowContainerStyles} align="center">
-      <Flex css={listRowLeftStyles}></Flex>
-      <Flex css={listRowContentsStyles}>
-        {/* <ListRow.Texts
-          title={
-            <>
-              <Skeleton width={67} height={23} />
-              <Spacing size={2} />
-            </>
-          }
-          subTitle={<Skeleton width={85} height={20} />}
-        /> */}
-      </Flex>
-      <IconArrowRight />
     </Flex>
   )
 }
@@ -96,6 +71,5 @@ function IconArrowRight() {
 }
 
 ListRow.Texts = ListRowTexts
-ListRow.Skeleton = ListRowSkeleton
 
 export default ListRow
