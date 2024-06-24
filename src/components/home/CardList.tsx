@@ -1,12 +1,12 @@
 import { useInfiniteQuery } from 'react-query'
 import { getCards } from '@remote/card'
-import { flatten } from 'lodash'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import ListRow from '@shared/ListRow'
 import { useCallback } from 'react'
 import Badge from '../shared/Badge'
 import { useNavigate } from 'react-router-dom'
+import flatten from 'lodash.flatten'
 
 function CardList() {
   const navigate = useNavigate()

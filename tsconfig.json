@@ -6,7 +6,6 @@
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
@@ -17,7 +16,8 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "types": ["jest", "@testing-library/jest-dom"],
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src", "tsconfig.paths.json"]
 }
