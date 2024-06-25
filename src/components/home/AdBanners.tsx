@@ -14,6 +14,7 @@ import 'swiper/css'
 function AdBanners() {
   const { data, isLoading } = useQuery(['adBanners'], () => getAdBanners())
 
+  //layout shift 피하기 (공백을 넣어줌)
   if (data == null || isLoading) {
     return (
       <Container>
